@@ -1,0 +1,195 @@
+.review-body {
+      font-family: 'Roboto Mono', monospace;
+    }
+    /* Custom CSS for specific border-radius values */
+    .card-design-1 {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 45px; /* Approximately 45px for a noticeable curve */
+        border-bottom-left-radius: 10px;
+    }
+
+    .card-design-2 {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 45px; /* Approximately 45px for a noticeable curve */
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    /* Custom shadow color - slightly darker green */
+    .custom-shadow-darker {
+        box-shadow: 8px 8px 15px rgba(58,74,0,0.25); /* Increased opacity to 0.25 */
+    }
+
+    /* Specific header radius for review cards as per image */
+    .review-header-radius {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px; /* Sharp bottom left */
+        border-bottom-right-radius: 0px; /* Sharp bottom right */
+    }
+
+    /* Placeholder text color for input fields */
+    .placeholder-white::placeholder {
+        color: white;
+    }
+
+         input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    details:not([open]) > :not(summary) {
+      display: none;
+    }
+
+    
+    details[open] summary {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    
+    summary::marker,
+    .custom-marker::before { 
+      color: #e5e5e5; 
+    }
+
+    
+    body {
+        padding: 0;
+    }
+
+    
+    .fa-phone-alt-rotated-right {
+        transform: rotate(90deg); 
+        display: inline-block; 
+    }
+
+    
+    .footer-divider {
+        background-color: #ffeb3b; 
+        height: 1px; 
+        width: 90%; 
+        margin: 0 auto; 
+    }
+
+    
+    .vertical-divider {
+        border-left: 1px solid #ffeb3b; 
+        height: 20px; 
+        margin: 0 1rem; 
+    }
+
+  
+    .footer-content-wrapper {
+        max-width: 84rem; 
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.5rem; 
+        padding-right: 1.5rem; 
+    }
+
+    @media (min-width: 768px) { 
+        .footer-content-wrapper {
+            padding-left: 2.5rem; 
+            padding-right: 2.5rem; 
+        }
+    }
+
+    @media (min-width: 1024px) { 
+        .footer-content-wrapper {
+            padding-left: 4rem; 
+            padding-right: 4rem; 
+        }
+    }
+
+    footer {
+      padding-top: 0rem; 
+      padding-bottom: 0rem; 
+    }
+
+
+    .footer-top-section {
+        padding-top: 1rem; 
+        padding-bottom: 1rem;
+    }
+
+    .footer-middle-section {
+        padding-top: 1rem; 
+        padding-bottom: 1rem; 
+    }
+
+    .footer-bottom-section {
+        padding-top: 0.5rem; 
+        padding-bottom: 1rem; 
+    }
+
+    @media (min-width: 768px) { 
+        .faq-top-divider-container {
+            padding-right: 2.5rem; 
+        }
+    }
+
+    @media (min-width: 1024px) { 
+        .faq-top-divider-container {
+            padding-right: 5rem; 
+        }
+    }
+
+      .faq-top-divider-container {
+        position: relative;
+        height: 10px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .review-top-divider-container {
+         position: relative;
+        height: 10px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        }
+
+      .review-top-divider-circle {
+        width: 10px;
+        height: 10px;
+        background-color: #2f4600;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      .review-top-divider-line {
+        position: absolute;
+        top: 4px;
+        left: 50%;
+        transform: translateX(-100%); 
+        width: 660px;
+        height: 2px;
+        background-color: #2f4600;
+        z-index: 1;
+      }
+
+      .faq-top-divider-circle {
+        width: 10px;
+        height: 10px;
+        background-color: #2f4600;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      .faq-top-divider-line {
+        position: absolute;
+        top: 4px;
+        left: 50%;
+        transform: translateX(-6%); 
+        width: 660px;
+        height: 2px;
+        background-color: #2f4600;
+        z-index: 1;
+      }
