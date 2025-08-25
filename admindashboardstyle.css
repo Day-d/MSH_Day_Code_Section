@@ -1,0 +1,273 @@
+:root {
+    --sidebar-bg: #3d6bc8; /* Dark blue from Smart Dashboard sidebar */
+    --sidebar-item-hover: #3a4b6b;
+    --sidebar-active-bg: #f0f2f5;
+    --sidebar-active-indicator: #6a82fb; /* Accent color for active item */
+    --topbar-bg: #ffffff;
+    --main-bg: #f0f2f5; /* Light grey background for the whole page */
+    --white-card-bg: #ffffff;
+    --text-color: #333333;
+    --light-text-color: #666666;
+    --border-color: #e0e0e0;
+    --shadow-light: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-medium: 0 4px 15px rgba(0,0,0,0.08);
+    --border-radius-card: 12px;
+    --border-radius-item: 8px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: var(--main-bg);
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    color: white;
+    padding-top: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+.sidebar-header .logo-img {
+    width: 35px;
+    height: 35px;
+    border-radius: var(--border-radius-item);
+    margin-right: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, border-left 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--sidebar-item-hover);
+}
+
+.sidebar ul li.active {
+    background-color: var(--sidebar-active-bg);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.sidebar ul li.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--sidebar-active-indicator);
+    border-radius: 0 5px 5px 0;
+}
+
+.sidebar ul li.active + li {
+    border-top-left-radius: var(--border-radius-card);
+}
+.sidebar ul li:has(+ .active) {
+    border-bottom-left-radius: var(--border-radius-card);
+}
+
+.sidebar .logout {
+    padding: 20px;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #cbd5e0;
+}
+.sidebar .logout:hover {
+    background-color: var(--sidebar-item-hover);
+    color: white;
+}
+
+.main-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg);
+}
+
+.top-bar {
+    background-color: var(--topbar-bg);
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    /* Changed to space-between to push search to left and profile to right */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-light);
+    flex-shrink: 0;
+    border-bottom-left-radius: var(--border-radius-card);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg);
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 300px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex-grow: 1;
+    padding: 0 10px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.top-right-nav {
+    display: flex;
+    align-items: center;
+    /* flex-grow: 1; /* Removed flex-grow here */
+    justify-content: flex-end; /* Push content to the right */
+}
+
+/* Removed styles for .top-right-nav .nav-item, .top-right-nav .nav-item .badge, .lang-select .icon-image as they are no longer needed */
+/* Removed .lang-select and .top-right-nav .nav-item img filters */
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-left: 25px; /* Adjust as needed for spacing */
+    cursor: pointer;
+    background-color: var(--main-bg);
+    padding: 5px 15px 5px 5px;
+    border-radius: 25px;
+    transition: background-color 0.2s ease;
+}
+.user-profile:hover {
+    background-color: var(--border-color);
+}
+.user-profile .profile-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid #6a82fb;
+}
+.user-profile span {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: var(--white-card-bg);
+    padding: 30px;
+    margin: 20px;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-medium);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.page-content {
+    display: none;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+.page-content.active-page {
+    display: block;
+}
+.page-content h2 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.page-content p {
+    color: var(--light-text-color);
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 70px;
+    }
+    .sidebar-header span, .sidebar ul li span, .sidebar .logout {
+        display: none;
+    }
+    .sidebar-header {
+        justify-content: center;
+    }
+    .sidebar-header .logo-img {
+        margin: 0;
+    }
+    .sidebar ul li {
+        justify-content: center;
+    }
+    .sidebar ul li.active::before {
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+    }
+    .top-bar {
+        padding: 15px;
+    }
+    .search-bar {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-bar { /* Show search bar again for smaller screens if it was hidden by previous rules */
+        display: flex;
+        width: auto; /* Allow it to shrink */
+        flex-grow: 1; /* Take up more space */
+    }
+    .top-right-nav {
+        margin-left: auto;
+    }
+    .user-profile span {
+        display: none;
+    }
+    .user-profile {
+        padding: 5px;
+        border-radius: 50%;
+        margin-left: 10px; /* Adjust margin */
+    }
+}

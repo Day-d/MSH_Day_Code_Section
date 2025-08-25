@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="admindashboardstyle.css"> 
+    <link rel="stylesheet" href="servicenew.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vd1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img class="logo-img" src="images/logo.jpg" alt="Kimberley Logo"> <span>Kimberley</span>
+        </div>
+        <ul>
+            <li class="nav-item active" data-page="hero"> <span>Hero</span>
+            </li>
+            <li class="nav-item" data-page="video"> <span>Video</span>
+            </li>
+            <li class="nav-item" data-page="packages"> <span>Packages</span>
+            </li>
+            <li class="nav-item" data-page="destinations"> <span>Destinations</span>
+            </li>
+            <li class="nav-item" data-page="hotels"> <span>Hotels</span>
+            </li>
+            <li class="nav-item" data-page="services"> <span>Services</span>
+            </li>
+            <li class="nav-item" data-page="gallery"> <span>Gallery</span>
+            </li>
+            <li class="nav-item" data-page="reviews"> <span>Reviews</span>
+            </li>
+            <li class="nav-item" data-page="faqs"> <span>FAQs</span>
+            </li>
+        </ul>
+        <div class="logout">
+            Log Out
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="top-bar">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="top-right-nav">
+                <div class="user-profile">
+                    <img class="profile-avatar" src="https://i.pinimg.com/736x/6d/38/6a/6d386ae9e5ebce8e830fd51ca21a5ac1.jpg" alt="User Avatar"> <span>Admin: Amera Lily</span>
+                </div>
+            </div>
+        </div>
+
+<!-- Hero Content Area -->
+
+        <div class="main-content" id="mainContent">
+            <div id="hero-page" class="page-content active-page">
+                <h2>Hero Section</h2>
+                <section class="hero-section-admin">
+                <h2>Hero Section</h2>
+                <div class="hero-cards-container">
+                    </div>
+
+                <div class="hero-form-container">
+                    <h3>Edit Hero Item</h3>
+                    <form id="heroEditForm">
+                        <div class="image-upload-area">
+                            <img id="previewImage" src="" alt="Image Preview" class="image-preview">
+                            <i class="fas fa-image"></i>
+                            <input type="file" id="heroImageUpload" accept="image/*" style="display: none;">
+                            <button type="button" id="uploadButton"><i class="fas fa-upload"></i> Upload</button>
+                        </div>
+                        <div class="form-fields">
+                            <div class="form-group">
+                                <label for="destination">Destination :</label>
+                                <input type="text" id="destination" maxlength="80" placeholder="eg. BAGAN">
+                            </div>
+                            <div class="form-group">
+                                <label for="fromWhere">From Where :</label>
+                                <input type="text" id="fromWhere" maxlength="80"placeholder="eg. Mandalay Myanmar">
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-ok">OK</button>
+                                <button type="button" class="btn btn-cancel" id="cancelButton">CANCEL</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+<script src="script2.js"></script>
+ </div>
+
+<!-- Video Content Area -->
+            <div id="video-page" class="page-content">
+                <h2>Video Section</h2>
+                <div class="main-content-single-box">
+            <div class="input-group">
+                <label for="editTitle">Edit Title</label>
+                <input type="text" id="editTitle" value="Discover the world in a new way">
+            </div>
+            <div class="input-group">
+                <label for="editSubtitle">Edit Subtitle</label>
+                <textarea id="editSubtitle">"The world isn't just a place, it's a feeling waiting to be lived. Every road, every turn, every view has a story-yours begins the moment you decide to go. Travel not to escape life, but to let life find you."</textarea>
+            </div>
+            <div class="url-group-container">
+                <div class="input-group">
+                    <label for="videoURL">Video URL</label>
+                    <input type="text" id="videoURL" value="https://klmberly.com/video.mp4">
+                </div>
+                <div class="input-group">
+                    <label for="imageURL">Image URL</label>
+                    <input type="text" id="imageURL" value="https://klmberly.com/image.png">
+                </div>
+            </div>
+        </div>
+
+            </div>
+<!-- Packages Content Area -->
+            <div id="packages-page" class="page-content">
+                <section class="Pcontainer" id="Pcontainer">   
+        <div class="header">
+            <h1>Popular Packages Section</h1>
+            <button class="change-background-btn" id="open-background-modal">
+                <i class="fas fa-edit"></i> Change Background
+            </button>
+        </div>
+
+        <div class="packages-grid">
+            </div>
+
+        <div class="edit-form-container" style="display: none;">
+            <div class="edit-form-box">
+                <div class="image-upload-area">
+                    <img id="preview-image" src="" alt="Package Image" style="display: none;">
+                    <div class="upload-icon-text" id="upload-placeholder">
+                        <i class="fas fa-image fa-3x"></i>
+                        <p>Upload</p>
+                    </div>
+                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    <button class="upload-button" id="trigger-image-upload">Upload</button>
+                </div>
+                <div class="form-fields">
+                    <div class="form-group">
+                        <label for="package-name">Name :</label>
+                        <input type="text" id="package-name"maxlength="80" placeholder="eg. Adventure Explorer">
+                    </div>
+                    <div class="form-group">
+                        <label for="package-caption">Caption :</label>
+                        <input type="text" id="package-caption" maxlength="80"placeholder="eg. 7 days of adventure including hiking, sightseeing, and cultural experiences.">
+                    </div>
+                    <div class="form-group">
+                        <label for="package-price">Price :</label>
+                        <input type="text" id="package-price" maxlength="80"placeholder="eg. $ 2299 per person">
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-ok" id="save-changes">OK</button>
+                        <button class="btn btn-cancel" id="cancel-edit">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+    <div id="background-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button" id="close-background-modal">&times;</span>
+            <h2>Change Section Background</h2>
+            <div class="image-upload-area modal-upload-area">
+                <img id="preview-background-image" src="" alt="Background Image" style="display: none;">
+                <div class="upload-icon-text" id="upload-background-placeholder">
+                    <i class="fas fa-image fa-3x"></i>
+                    <p>Upload Background</p>
+                </div>
+                <input type="file" id="background-image-upload" accept="image/*" style="display: none;">
+                <button class="upload-button" id="trigger-background-image-upload">Upload</button>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-ok" id="save-background-changes">OK</button>
+                <button class="btn btn-cancel" id="cancel-background-changes">CANCEL</button>
+            </div>
+        </div>
+    </div>
+</section>    
+            
+        </main>
+    </div>
+    <script src="script3.js"></script>
+
+<!-- Destinations Content Area -->
+            <div id="destinations-page" class="page-content">
+                <section id="destinations-section" class="section destinations">
+  <h2 class="section-title">Manage Destinations</h2>
+
+  <header class="section-header">
+    <h3 class="section-subtitle">Destinations Overview</h3>
+
+    <div class="search-group">
+      <input type="search" class="search-input" placeholder="Search Destinations...">
+      <select class="filter-select filter-dropdown" id="filter-country">
+        <option value="">All Countries</option>
+        <option value="USA">United States</option>
+        <option value="France">France</option>
+        <option value="Japan">Japan</option>
+        <option value="Australia">Australia</option>
+      </select>
+      <select class="filter-select filter-dropdown" id="filter-season">
+        <option value="">All Seasons</option>
+        <option value="Spring">Spring</option>
+        <option value="Summer">Summer</option>
+        <option value="Autumn">Autumn</option>
+        <option value="Winter">Winter</option>
+      </select>
+      <button class="primary-btn" id="add-destination-toggle">Add New Destination</button>
+      <button class="secondary-btn">See All Destinations</button>
+    </div>
+  </header>
+
+  <div class="cards-grid">
+    <article class="card"
+             data-id="dest001"
+             data-name="Thrilling Water Sliding"
+             data-country="USA"
+             data-season="Summer"
+             data-description="Experience the rush of exhilarating water slides and refreshing pools. Perfect for a fun-filled family getaway!"
+             data-contact="+1 (555) 123-4567"
+             data-image="Photo/P1.jpg"
+             data-tags="fun, family, waterpark">
+      <img class="card-img" src="images/P1.jpg" alt="Water sliding">
+      <button class="edit-btn" data-type="destination">Edit</button>
+      <h4 class="card-title">Thrilling Water Sliding</h4>
+      <div class="card-content">
+        <p class="card-desc">
+          Experience the rush of exhilarating water slides and refreshing pools. Perfect for a fun-filled family getaway!
+        </p>
+        <span class="contact">📞 Contact Us: +1 (555) 123-4567</span>
+      </div>
+    </article>
+
+    <article class="card"
+             data-id="dest002"
+             data-name="Deep Sea Scuba Diving"
+             data-country="Australia"
+             data-season="Summer"
+             data-description="Dive into crystal-clear waters and explore vibrant marine life. An unforgettable adventure for ocean lovers."
+             data-contact="+61 (02) 9876 5432"
+             data-image="Photo/P2.jpg"
+             data-tags="adventure, ocean, marine">
+      <img class="card-img" src="images/P2.jpg" alt="Scuba diving">
+      <button class="edit-btn" data-type="destination">Edit</button>
+      <h4 class="card-title">Deep Sea Scuba Diving</h4>
+      <div class="card-content">
+        <p class="card-desc">
+          Dive into crystal-clear waters and explore vibrant marine life. An unforgettable adventure for ocean lovers.
+        </p>
+        <span class="contact">📞 Contact Us: +61 (02) 9876 5432</span>
+      </div>
+    </article>
+
+    <article class="card"
+             data-id="dest003"
+             data-name="Majestic Mountain Treks"
+             data-country="Japan"
+             data-season="Autumn"
+             data-description="Discover awe-inspiring peaks and challenging trails with this breathtaking mountain adventure."
+             data-contact="+81 (03) 1234 5678"
+             data-image="Photo/P3.jpg"
+             data-tags="mountain, hiking, nature">
+      <img class="card-img" src="images/P3.jpg" alt="Mountain Adventures">
+      <button class="edit-btn" data-type="destination">Edit</button>
+      <h4 class="card-title">Majestic Mountain Treks</h4>
+      <div class="card-content">
+        <p class="card-desc">
+          Discover awe-inspiring peaks and challenging trails with this breathtaking mountain adventure.
+        </p>
+        <span class="contact">📞 Contact Us: +81 (03) 1234 5678</span>
+      </div>
+    </article>
+
+     <article class="card"
+             data-id="dest004"
+             data-name="Desert Safari Thrills"
+             data-country="UAE"
+             data-season="Winter"
+             data-description="Embark on an exciting desert safari, witness stunning sunsets, and experience traditional Bedouin culture."
+             data-contact="+971 (4) 555-9999"
+             data-image="Photo/P4.jpg"
+             data-tags="desert, safari, culture">
+      <img class="card-img" src="images/P4.jpg" alt="Desert Safari">
+      <button class="edit-btn" data-type="destination">Edit</button>
+      <h4 class="card-title">Desert Safari Thrills</h4>
+      <div class="card-content">
+        <p class="card-desc">
+          Embark on an exciting desert safari, witness stunning sunsets, and experience traditional Bedouin culture.
+        </p>
+        <span class="contact">📞 Contact Us: +971 (4) 555-9999</span>
+      </div>
+    </article>
+  </div>
+
+  <form id="add-destination-form" class="add-form hidden">
+    <div class="form-header">
+      <h3 id="destination-form-title">Add New Destination</h3>
+      <button type="button" class="close-btn" id="close-destination-form">&times;</button>
+    </div>
+
+    <input type="hidden" id="destination-edit-id" name="id">
+
+    <label>
+      Destination Name*
+      <input type="text" name="name" required placeholder="e.g., Grand Canyon, Paris" id="destination-name">
+    </label>
+
+    <label>
+      Contact Number
+      <input type="tel" name="contact" placeholder="e.g., +123 456 7890" id="destination-contact">
+    </label>
+
+    <label>
+      Tags / Highlights
+      <input type="text" name="tags" placeholder="e.g., historical, beach, adventurous (comma-separated)" id="destination-tags">
+    </label>
+
+    <label>
+      Description
+      <textarea name="description" rows="4" placeholder="Describe this Destination in detail..." id="destination-description"></textarea>
+    </label>
+
+    <label>
+      Upload Images
+      <div class="file-upload-container">
+        <input type="file" multiple accept="image/*" id="destination-image-upload">
+        <div class="file-upload-content">
+          <button type="button" class="file-upload-button">Browse...</button>
+          <span class="file-upload-text" id="destination-file-status">No files selected.</span>
+          <small>Click to upload or drag and drop images<br>Multiple files Supported (PNG, JPG, JPEG)</small>
+        </div>
+      </div>
+      <div id="destination-current-image-preview" style="margin-top: 10px; display: none;">
+        <p>Current Image:</p>
+        <img id="destination-current-image" src="" alt="Current Destination Image" style="max-width: 200px; height: auto; border-radius: var(--radius-sm);">
+      </div>
+    </label>
+
+    <label>
+      Country*
+      <select name="country" required id="destination-country">
+        <option value="">Select Country</option>
+        <option value="USA">United States</option>
+        <option value="France">France</option>
+        <option value="Japan">Japan</option>
+        <option value="Australia">Australia</option>
+        <option value="UAE">UAE</option>
+      </select>
+    </label>
+
+    <label>
+      Recommended Season
+      <select name="season" id="destination-season">
+        <option value="">Select Season</option>
+        <option value="Spring">Spring</option>
+        <option value="Summer">Summer</option>
+        <option value="Autumn">Autumn</option>
+        <option value="Winter">Winter</option>
+      </select>
+    </label>
+
+    <div class="form-actions">
+      <button type="button" class="btn cancel-btn" id="cancel-destination-add">Cancel</button>
+      <button type="submit" class="btn save-btn">Save Destination</button>
+    </div>
+  </form>
+</section>
+
+
+            </div>
+<!-- Hotels Content Area -->
+            <div id="hotels-page" class="page-content">
+                <section id="hotels-section" class="section hotels">
+               
+  <h2 class="section-title">Manage Hotels</h2>
+
+  <header class="section-header">
+    <h3 class="section-subtitle">Hotels Overview</h3>
+
+    <div class="search-group">
+      <input type="search" class="search-input" placeholder="Search Hotels...">
+      <select class="filter-select filter-dropdown" id="filter-hotel-destination">
+        <option value="">All Destinations</option>
+        <option value="Paris">Paris</option>
+        <option value="New York">New York</option>
+        <option value="Tokyo">Tokyo</option>
+      </select>
+      <select class="filter-select filter-dropdown" id="filter-rating">
+        <option value="">All Ratings</option>
+        <option value="1">1 Star</option>
+        <option value="2">2 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="5">5 Stars</option>
+      </select>
+      <button class="primary-btn" id="add-hotel-toggle">Add New Hotel</button>
+      <button class="secondary-btn">See All Hotels</button>
+    </div>
+  </header>
+
+  <div class="cards-grid">
+    <article class="card"
+             data-id="hot001"
+             data-name="Grand Lux Hotel"
+             data-destination="Paris"
+             data-rating="5"
+             data-minprice="250"
+             data-maxprice="800"
+             data-roomtypes="Standard Double,Suite,Penthouse"
+             data-amenities="Free WiFi,Swimming Pool,Restaurant,Breakfast Included,Concierge Service,Fitness Center"
+             data-description="A five-star luxury resort offering unparalleled comfort and world-class amenities in a stunning location."
+             data-contact="+33 (0)1 23 45 67 89"
+             data-image="Photo/P5.jpg">
+      <img class="card-img" src="images/P5.jpg" alt="Luxury Resort">
+      <button class="edit-btn" data-type="hotel">Edit</button>
+      <h4 class="card-title">Grand Lux Hotel</h4>
+      <div class="card-content">
+        <p class="card-desc">
+          A five-star luxury resort offering unparalleled comfort and world-class amenities in a stunning location.
+        </p>
+        <span class="contact">📞 Contact Us: +33 (0)1 23 45 67 89</span>
+      </div>
+    </article>
+
+    <article class="card"
+             data-id="hot002"
+             data-name="The Cozy Boutique"
+             data-destination="New York"
+             data-rating="4"
+             data-minprice="150"
+             data-maxprice="300"
+             data-roomtypes="Standard,Deluxe"
+             data-amenities="Free WiFi,Breakfast Included,Bar/Lounge,Pet Friendly"
+             data-description="Charming boutique hotel with unique decor and personalized service, perfect for a romantic getaway."
+             data-contact="+1 (212) 555-1234"
+             data-image="Photo/P6.jpg">
+      <img class="card-img" src="images/P6.jpg" alt="Boutique Hotel">
+      <button class="edit-btn" data-type="hotel">Edit</button>
+      <h4 class="card-title">The Cozy Boutique</h4>
+      <div class="card-content">
+        <p class="card-desc">
+          Charming boutique hotel with unique decor and personalized service, perfect for a romantic getaway.
+        </p>
+        <span class="contact">📞 Contact Us: +1 (212) 555-1234</span>
+      </div>
+    </article>
+
+    <article class="card"
+             data-id="hot003"
+             data-name="Downtown City Hub"
+             data-destination="Tokyo"
+             data-rating="3"
+             data-minprice="100"
+             data-maxprice="200"
+             data-roomtypes="Standard Single,Standard Double"
+             data-amenities="Free WiFi,Restaurant,Air Conditioning,Airport Shuttle"
+             data-description="Modern hotel located in the heart of the city, ideal for business travelers and urban explorers."
+             data-contact="+81 (03) 9876 5432"
+             data-image="Photo/P7.jpg">
+      <img class="card-img" src="images/P7.jpg" alt="City View Hotel">
+      <button class="edit-btn" data-type="hotel">Edit</button>
+      <h4 class="card-title">Downtown City Hub</h4>
+      <div class="card-content">
+        <p class="card-desc">
+          Modern hotel located in the heart of the city, ideal for business travelers and urban explorers.
+        </p>
+        <span class="contact">📞 Contact Us: +81 (03) 9876 5432</span>
+      </div>
+    </article>
+  </div>
+
+  <form id="add-hotel-form" class="add-form hidden">
+    <div class="form-header">
+      <h3 id="hotel-form-title">Add New Hotel</h3>
+      <button type="button" class="close-btn" id="close-hotel-form">&times;</button>
+    </div>
+
+    <input type="hidden" id="hotel-edit-id" name="id">
+
+    <label>
+      Hotel Name*
+      <input type="text" name="name" required placeholder="e.g., The Plaza Hotel" id="hotel-name">
+    </label>
+
+    <label>
+      Contact Number
+      <input type="tel" name="contact" placeholder="e.g., +123 456 7890" id="hotel-contact">
+    </label>
+
+    <label>
+      Linked Destination*
+      <select name="destination" required id="hotel-destination">
+        <option value="">Select Destination</option>
+        <option value="Paris">Paris</option>
+        <option value="New York">New York</option>
+        <option value="Tokyo">Tokyo</option>
+      </select>
+    </label>
+
+    <label>
+      Star Rating
+      <select name="rating" id="hotel-rating">
+        <option value="">Select Rating</option>
+        <option value="1">1 Star</option>
+        <option value="2">2 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="5">5 Stars</option>
+      </select>
+    </label>
+
+    <label>
+      Price Range
+      <div class="price-range-group">
+        <input type="number" name="minPrice" placeholder="Min" min="0" id="hotel-minprice">
+        <span>to</span>
+        <input type="number" name="maxPrice" placeholder="Max" min="0" id="hotel-maxprice">
+        <span>Per Night</span>
+      </div>
+    </label>
+
+    <label>
+      Room Types
+      <div id="room-types-container">
+        <div class="room-type-input-group">
+            <input type="text" name="roomType[]" placeholder="e.g., Standard Double">
+            <button type="button" class="remove-room-type-btn hidden">&times;</button>
+        </div>
+      </div>
+      <button type="button" class="btn add-room-type-btn" id="add-room-type-btn">Add Room Type</button>
+    </label>
+
+    <label>
+      Amenities
+      <div class="amenities-grid" id="hotel-amenities">
+        <label><input type="checkbox" name="amenity" value="Free WiFi">Free WiFi</label>
+        <label><input type="checkbox" name="amenity" value="Swimming Pool">Swimming Pool</label>
+        <label><input type="checkbox" name="amenity" value="Restaurant">Restaurant</label>
+        <label><input type="checkbox" name="amenity" value="Breakfast Included">Breakfast Included</label>
+        <label><input type="checkbox" name="amenity" value="Concierge Service">Concierge Service</label>
+        <label><input type="checkbox" name="amenity" value="Fitness Center">Fitness Center</label>
+        <label><input type="checkbox" name="amenity" value="Bar/Lounge">Bar/Lounge</label>
+        <label><input type="checkbox" name="amenity" value="Pet Friendly">Pet Friendly</label>
+        <label><input type="checkbox" name="amenity" value="Spa Services">Spa Services</label>
+        <label><input type="checkbox" name="amenity" value="Free Parking">Free Parking</label>
+        <label><input type="checkbox" name="amenity" value="Air Conditioning">Air Conditioning</label>
+        <label><input type="checkbox" name="amenity" value="Airport Shuttle">Airport Shuttle</label>
+      </div>
+    </label>
+
+    <label>
+      Description
+      <textarea name="description" rows="4" placeholder="Describe this Hotel in detail..." id="hotel-description"></textarea>
+    </label>
+
+    <label>
+      Upload Images
+      <div class="file-upload-container">
+        <input type="file" multiple accept="image/*" id="hotel-image-upload">
+        <div class="file-upload-content">
+          <button type="button" class="file-upload-button">Browse...</button>
+          <span class="file-upload-text" id="hotel-file-status">No files selected.</span>
+          <small>Click to upload or drag and drop images<br>Multiple files Supported (PNG, JPG, JPEG)</small>
+        </div>
+      </div>
+      <div id="hotel-current-image-preview" style="margin-top: 10px; display: none;">
+        <p>Current Image:</p>
+        <img id="hotel-current-image" src="" alt="Current Hotel Image" style="max-width: 200px; height: auto; border-radius: var(--radius-sm);">
+      </div>
+    </label>
+
+    <div class="form-actions">
+      <button type="button" class="btn cancel-btn" id="cancel-hotel-add">Cancel</button>
+      <button type="submit" class="btn save-btn">Save Hotel</button>
+    </div>
+  </form>
+</section>
+ <script src="script.js"></script>
+
+
+
+            </div>
+<!-- Services Content Area -->
+
+            <div id="services-page" class="page-content">       
+    Manage Services
+   </h2>
+   <div class="flex flex-wrap gap-2 mb-3">
+    <button class="bg-sky-400 text-white text-xs rounded px-3 py-1 font-semibold" type="button">
+     Air Ticket
+    </button>
+    <button class="bg-gray-300 text-gray-700 text-xs rounded px-3 py-1 font-normal" type="button">
+     Hotel Booking
+    </button>
+    <button class="bg-gray-300 text-gray-700 text-xs rounded px-3 py-1 font-normal" type="button">
+     Event Plan
+    </button>
+    <div class="ml-auto">
+     <button class="bg-sky-400 text-white text-xs rounded-full px-4 py-1 font-semibold whitespace-nowrap" type="button">
+      Add new service category +
+     </button>
+    </div>
+   </div>
+   <div class="border border-gray-400 rounded-md relative mb-6" style="background-color: transparent">
+    <img alt="Blue sky with white clouds background image" class="rounded-md" height="180" src="https://i.pinimg.com/1200x/f4/dc/48/f4dc486aea9fc054bd6856f806862d09.jpg" width="1165"/>
+    <div class="absolute top-3 left-3 right-3 text-black text-sm font-normal" style="line-height: 1.2">
+     <p style="color: black;">
+      Our Exclusive Services
+     </p>
+     <p style="color: black;">
+      Specially curated experiences - only with Kimberly Tours.
+     </p>
+    </div>
+    <div class="absolute bottom-3 left-3 flex gap-3 text-xs font-semibold">
+     <button class="bg-sky-400 text-white rounded-full px-4 py-1" type="button">
+      Edit Section Overview
+     </button>
+     <button class="bg-white border border-gray-300 rounded-full px-4 py-1 text-gray-700" type="button">
+      Save Section Overview
+     </button>
+    </div>
+   </div>
+   <h3 class="font-bold text-sm mb-2">
+    Editing: Air Tickets Service Details
+   </h3>
+   <div class="mb-4">
+    <label class="font-semibold text-sm inline-block mb-1" for="serviceTitle">
+     Service Title:
+    </label>
+    <select class="bg-sky-400 text-white text-xs rounded-full px-3 py-1 font-semibold" id="serviceTitle" style="min-width: 200px">
+     <option selected="">
+      Affordable Air Ticket Services
+     </option>
+     <option>
+      Budget-Friendly Flights
+     </option>
+     <option>
+      Economical Airfare Solutions
+     </option>
+    </select>
+   </div>
+   <div class="mb-4">
+    <p class="font-semibold text-sm mb-1">
+     Description/Bullet Points:
+    </p>
+    <ul class="list-disc list-inside text-gray-800 text-sm leading-tight">
+     <li>
+      Top-notch service at budget-friendly prices!
+     </li>
+     <li>
+      We ensure every journey meets your expectations…
+     </li>
+     <li>
+      Travel the world with peace of mind…
+     </li>
+    </ul>
+   </div>
+   <div class="mb-4 flex gap-3 flex-wrap">
+    <button class="bg-sky-400 text-white text-xs rounded-full px-4 py-1 font-semibold whitespace-nowrap" type="button">
+     Add new bullet point +
+    </button>
+    <button class="bg-red-700 text-white text-xs rounded-full px-4 py-1 font-semibold whitespace-nowrap" type="button">
+     Delete bullet point -
+    </button>
+   </div>
+   <div class="mb-4">
+    <p class="font-semibold text-sm mb-2">
+     Associated Image:
+    </p>
+    <div class="flex gap-4 flex-wrap">
+     <div class="border-2 border-dashed border-gray-500 rounded-lg overflow-hidden w-44 flex flex-col justify-between items-center p-2 h-44">
+      <img alt="Airplane flying above clouds side view" class="object-cover rounded-lg h-24 w-36" height="96" src="https://storage.googleapis.com/a1aa/image/6d4c533f-0292-43e7-2754-2b076271e893.jpg" width="144"/>
+      <button class="bg-sky-400 text-white text-xs rounded-b-lg w-full py-1 font-semibold mt-auto" type="button">
+       Upload New Photo
+      </button>
+     </div>
+     <div class="border-2 border-dashed border-gray-500 rounded-lg overflow-hidden w-44 flex flex-col justify-between items-center p-2 h-44">
+      <img alt="Blue sky with white clouds" class="object-cover rounded-lg h-24 w-36" height="96" src="https://storage.googleapis.com/a1aa/image/e1d86eb9-cbb9-486e-c8fe-76aac38c2484.jpg" width="144"/>
+      <button class="bg-sky-400 text-white text-xs rounded-b-lg w-full py-1 font-semibold mt-auto" type="button">
+       Upload New Photo
+      </button>
+     </div>
+     <div class="border-2 border-dashed border-gray-500 rounded-lg overflow-hidden w-44 flex flex-col justify-between items-center p-2 h-44">
+      <img alt="Airplane with transparent background" class="object-contain rounded-lg bg-white h-24 w-36" height="96" src="https://i.pinimg.com/736x/81/e8/0d/81e80dd5571128ff08c03ed1c54c7d12.jpg" width="144"/>
+      <button class="bg-sky-400 text-white text-xs rounded-b-lg w-full py-1 font-semibold mt-auto" type="button">
+       Upload New Photo
+      </button>
+     </div>
+     <div class="border-2 border-dashed border-gray-500 rounded-lg overflow-hidden w-44 flex flex-col items-center justify-center text-gray-600 text-4xl font-light cursor-pointer h-44 p-2">
+      <div class="flex-grow flex items-center justify-center">
+       +
+      </div>
+      <button class="bg-sky-400 text-white text-xs rounded-b-lg w-full py-1 font-semibold mt-auto" type="button">
+       Upload New Photo
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="mb-4 flex items-center gap-3 flex-wrap">
+    <label class="font-normal text-sm whitespace-nowrap" for="ctaText">
+     Call to Action Button Text:
+    </label>
+    <input class="bg-gray-300 text-gray-700 text-xs rounded-full px-3 py-1 w-28 cursor-not-allowed text-center" id="ctaText" readonly="" type="text" value="Book Now"/>
+   </div>
+   <div class="flex gap-3 flex-wrap">
+    <button class="bg-red-700 text-white text-xs rounded-full px-4 py-1 font-semibold whitespace-nowrap" type="button">
+     Delete Air Ticket Service
+    </button>
+    <button class="bg-sky-400 text-white text-xs rounded-full px-4 py-1 font-semibold whitespace-nowrap" type="button">
+     Save Air Ticket Details
+    </button>
+   </div>
+   <br>
+    
+           <div
+    class="max-w-8xl mx-auto rounded-xl border border-gray-300 p-5 shadow-md"
+    style="font-family: Arial, sans-serif;"
+  >
+    <h2 class="font-bold text-gray-900 mb-4 text-[15px]">
+      Main Content Area: (Currently managing &quot;Stats/Counters&quot;)
+    </h2>
+
+    <div
+      class="border border-dashed border-gray-600 rounded-md mb-3 p-2 relative"
+      style="font-size: 12px; line-height: 1.2;"
+    >
+      <div
+        class="absolute -top-3 right-0 bg-white px-3 py-1 font-bold text-gray-900 text-[13px] rounded-tr-[20px] select-none"
+      >
+        Stat Item 1:
+      </div>
+      <p class="mb-0 mt-2">
+        <span class="font-semibold">Icon (Optional):</span> [ Current Icon Preview (people) ]
+      </p>
+      <p class="mb-0">
+        <span class="font-semibold">Number:</span> [ 3000 ]&nbsp;
+        <span class="text-gray-400 font-normal">Label: [ People ]</span>
+      </p>
+      <div class="absolute top-6 right-2 flex space-x-2">
+        <button
+          class="bg-[#b02a0e] text-white text-[11px] rounded-full px-2 py-[2px] font-semibold"
+          type="button"
+        >
+          Delete
+        </button>
+        <button
+          class="bg-[#00a9e0] text-white text-[11px] rounded-full px-2 py-[2px] font-semibold"
+          type="button"
+        >
+          Edit
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="border border-dashed border-gray-600 rounded-md mb-3 p-2 relative"
+      style="font-size: 12px; line-height: 1.2;"
+    >
+      <div
+        class="absolute -top-3 right-0 bg-white px-3 py-1 font-bold text-gray-900 text-[13px] rounded-tr-[20px] select-none"
+      >
+        Stat Item 2:
+      </div>
+      <p class="mb-0 mt-2">
+        <span class="font-semibold">Icon (Optional):</span> [ Current Icon Preview (location) ]
+      </p>
+      <p class="mb-0">
+        <span class="font-semibold">Number:</span> [ 730 ]&nbsp;
+        <span class="text-gray-400 font-normal">Label: [ Destinations ]</span>
+      </p>
+      <div class="absolute top-6 right-2 flex space-x-2">
+        <button
+          class="bg-[#b02a0e] text-white text-[11px] rounded-full px-2 py-[2px] font-semibold"
+          type="button"
+        >
+          Delete
+        </button>
+        <button
+          class="bg-[#00a9e0] text-white text-[11px] rounded-full px-2 py-[2px] font-semibold"
+          type="button"
+        >
+          Edit
+        </button>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-start mt-6">
+      <div
+        class="border border-dashed border-gray-600 rounded-md p-2 flex justify-center items-center flex-grow"
+        style="min-height: 70px; font-size: 12px;"
+      >
+        <button
+          class="bg-white border border-gray-300 rounded-full text-[12px] px-5 py-1 font-semibold"
+          type="button"
+        >
+          Add New Stat Item +
+        </button>
+      </div>
+
+      <div class="flex flex-col space-y-3 ml-3">
+        <button
+          class="bg-gray-300 text-gray-700 text-[12px] rounded-full px-5 py-1 font-semibold"
+          type="button"
+        >
+          Cancel Editing
+        </button>
+        <button
+          class="bg-[#00a9e0] text-white text-[12px] rounded-full px-5 py-1 font-semibold"
+          type="button"
+        >
+          Save All Stats
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+    </section>  
+<!-- Gallery Content Area -->
+            <div id="gallery-page" class="page-content">
+        <section class="mb-12">
+    <div class="text-center mb-4">
+      <p class="font-semibold text-base leading-5">
+        Our Gallery
+      </p>
+      <p class="font-semibold text-base leading-5">
+        Discover peace and energy through travel — with top-tier service from Kimberly Tours.
+      </p>
+    </div>
+    <div class="border-2 border-dashed border-gray-500 rounded-md mb-6 p-6 text-center max-w-full" style="min-height: 96px">
+      <p class="text-sm leading-5 mb-1">
+        Drag &amp; Drop images here to upload, or click to browse
+      </p>
+      <p class="text-sm leading-5 mb-3">
+        Max file size: X MB | Allowed types: JPG, PNG
+      </p>
+      <button class="inline-flex items-center bg-white border border-gray-300 rounded-full px-6 py-1 text-xs leading-4 font-normal text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-500" type="button">
+        Upload Photo
+        <i class="fas fa-upload ml-2 text-lg">
+        </i>
+      </button>
+    </div>
+    <div class="grid grid-cols-5 gap-4 mb-6">
+      <div class="relative group">
+        <img alt="Japanese pagoda with person holding red umbrella in front" class="w-full h-64 object-cover rounded" src="https://i.pinimg.com/736x/63/a6/80/63a68008790e0121277e13cb42a1b323.jpg"/>
+        <button class="absolute bottom-2 left-2 bg-red-600 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Delete
+        </button>
+        <button class="absolute bottom-2 right-2 bg-sky-500 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Edit
+        </button>
+      </div>
+      <div class="relative group">
+        <img alt="Woman in crowded red lit street looking away" class="w-full h-64 object-cover rounded" src="https://i.pinimg.com/736x/31/31/c0/3131c029d7b35d48ab5568ea7a9122ae.jpg"/>
+        <button class="absolute bottom-2 left-2 bg-red-600 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Delete
+        </button>
+        <button class="absolute bottom-2 right-2 bg-sky-500 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Edit
+        </button>
+      </div>
+      <div class="relative group">
+        <img alt="White temple with blue sky background" class="w-full h-64 object-cover rounded" src="https://i.pinimg.com/736x/fe/22/69/fe226995a7b7d69dd934bf32eb8c1df8.jpg"/>
+        <button class="absolute bottom-2 left-2 bg-red-600 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Delete
+        </button>
+        <button class="absolute bottom-2 right-2 bg-sky-500 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Edit
+        </button>
+      </div>
+      <div class="relative group">
+        <img alt="Kayaking in green water with cliffs in background" class="w-full h-64 object-cover rounded" src="https://i.pinimg.com/736x/e7/d8/c8/e7d8c8168f428a6469a1ae6df63c4b28.jpg"/>
+        <button class="absolute bottom-2 left-2 bg-red-600 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Delete
+        </button>
+        <button class="absolute bottom-2 right-2 bg-sky-500 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Edit
+        </button>
+      </div>
+      <div class="relative group">
+        <img alt="Man holding red flag in front of stone temple" class="w-full h-64 object-cover rounded" src="https://i.pinimg.com/1200x/61/b7/52/61b752fd0c463947b623a5b409bc2e0f.jpg"/>
+        <button class="absolute bottom-2 left-2 bg-red-600 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Delete
+        </button>
+        <button class="absolute bottom-2 right-2 bg-sky-500 text-white text-xs rounded-full px-3 py-1 font-semibold" type="button">
+          Edit
+        </button>
+      </div>
+    </div>
+    <div class="grid grid-cols-5 gap-4">
+      <div class="flex flex-col rounded bg-gray-100 border border-gray-300 w-full h-48 relative">
+        <div class="flex-grow flex items-center justify-center">
+          <i class="fas fa-plus text-gray-400 text-5xl">
+          </i>
+        </div>
+        <button class="w-full bg-sky-500 text-white text-xs font-semibold py-2 rounded-b" type="button">
+          Upload New Photo
+        </button>
+      </div>
+      <div class="col-span-4 flex flex-col items-start justify-end space-y-4 pr-4">
+        <div class="w-48"> <button class="bg-gray-300 text-gray-700 text-xs font-normal rounded-full px-6 py-2 w-full" type="button">
+          Cancel Editing
+          </button>
+          <button class="bg-sky-500 text-white text-xs font-semibold rounded-full px-6 py-2 w-full mt-2" type="button">
+          Save Gallery Order
+          </button>
+        </div>
+      </div>
+     <script src="servicenewscript.js"></script>
+    </div>
+  </div>
+    </section>
+
+<!--Reviews Content Area -->
+        <div id="reviews-page" class="page-content">
+                <div class="top-header">
+      <h2>Reviews</h2>
+      <div class="summary">
+        <span>Total reviews: <strong>120</strong></span>
+        <span>Average rating: <strong>4.5</strong></span>
+      </div>
+    </div>
+
+    <!-- ✅ Second Row -->
+    <div class="top-bar">
+      <input type="text" placeholder="Search by name or email" class="search-box"/>
+
+      <div class="filters">
+        <select>
+          <option>Filter by rating</option>
+          <option>5 Stars</option>
+          <option>4 Stars</option>
+        </select>
+
+        <select>
+          <option>Filter by destinations</option>
+          <option>Bagan, Myanmar</option>
+        </select>
+
+        <select>
+          <option>Sort by</option>
+          <option>Newest</option>
+          <option>Oldest</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ✅ Third Row -->
+    <div class="actions">
+      <div class="right-actions">
+        <img src="images/icons8-edit-30 (1).png" alt="Edit" class="icon-btn" title="Edit" />
+       
+        <img src="images/icons8-delete-30.png" alt="Delete" class="icon-btn" title="Delete" />
+        <button class="approve-btn">Approve</button>
+      </div>
+    </div>
+
+    <!-- ✅ Review Card -->
+    <div class="review-card" id="card-1">
+      <img src="images/images (1).jpg" alt="Profile" class="profile"/>
+
+      <div class="review-details">
+        <p class="name">Mrs.James <span>@jamesmail.com</span></p>
+        <p class="stars">★ ★ ★ ★ ☆</p>
+
+        <div class="review-text-container">
+          <p class="text" contenteditable="false">Truly the best travel service. I ever used, very professional, great planning…</p>
+          <button class="save-btn" style="display:none;">Save</button>
+        </div>
+      </div>
+
+      <div class="destination">
+        <p>Destination: <strong>Bagan, Myanmar</strong></p>
+        <p>Date: <strong>22/7/2025</strong></p>
+      </div>
+
+      <div class="dropdown">
+        <button class="dot-btn">⋮</button>
+        <div class="dropdown-menu">
+          <p onclick="editReview('card-1')">Edit</p>
+          <p onclick="hideReview('card-1')">Hide</p>
+          <p onclick="deleteReview('card-1')">Delete</p>
+        </div>
+      </div>
+    </div>
+<div class="review-card" id="card-1">
+      <img src="images/images (1).jpg" alt="Profile" class="profile"/>
+
+      <div class="review-details">
+        <p class="name">Mrs.James <span>@jamesmail.com</span></p>
+        <p class="stars">★ ★ ★ ★ ☆</p>
+
+        <div class="review-text-container">
+          <p class="text" contenteditable="false">Truly the best travel service. I ever used, very professional, great planning…</p>
+          <button class="save-btn" style="display:none;">Save</button>
+        </div>
+      </div>
+
+      <div class="destination">
+        <p>Destination: <strong>Bagan, Myanmar</strong></p>
+        <p>Date: <strong>22/7/2025</strong></p>
+      </div>
+
+      <div class="dropdown">
+        <button class="dot-btn">⋮</button>
+        <div class="dropdown-menu">
+          <p onclick="editReview('card-1')">Edit</p>
+          <p onclick="hideReview('card-1')">Hide</p>
+          <p onclick="deleteReview('card-1')">Delete</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script4.js"></script>
+            
+<!-- FAQs Content Area -->
+            <div id="faqs-page" class="page-content">
+                <div class="max-w-8xl mx-auto border border-gray-300 rounded-lg p-6 relative" style="min-height: 420px;">
+    <h2 class="font-semibold text-black mb-6">Frequently Asked Questions</h2>
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="border-b border-gray-200">
+          <th class="text-left font-semibold text-black pb-3 pr-6 w-12">#</th>
+          <th class="text-left font-semibold text-black pb-3">Questions</th>
+          <th class="text-right font-semibold text-black pb-3 w-16">Edit</th>
+          <th class="text-right font-semibold text-black pb-3 w-16">Delete</th>
+        </tr>
+      </thead>
+      <tbody class="text-black text-sm">
+        <tr class="border-t border-gray-200" id="row-1">
+          <td class="py-4 pr-6">1</td>
+          <td class="py-4" id="question-1">How can I book travel package?</td>
+          <td class="text-right pr-6">
+            <i class="fas fa-edit text-green-600 cursor-pointer" onclick="editQuestion(1)"></i>
+          </td>
+          <td class="text-right">
+            <i class="fas fa-trash-alt text-gray-600 cursor-pointer" onclick="deleteQuestion(1)"></i>
+          </td>
+        </tr>
+        <tr class="border-t border-gray-200" id="row-2">
+          <td class="py-4 pr-6">2</td>
+          <td class="py-4" id="question-2">Where can I find The cancellation policy?</td>
+          <td class="text-right pr-6">
+            <i class="fas fa-edit text-green-600 cursor-pointer" onclick="editQuestion(2)"></i>
+          </td>
+          <td class="text-right">
+            <i class="fas fa-trash-alt text-gray-600 cursor-pointer" onclick="deleteQuestion(2)"></i>
+          </td>
+        </tr>
+        <tr class="border-t border-gray-200" id="row-3">
+          <td class="py-4 pr-6">3</td>
+          <td class="py-4" id="question-3">What payment methods are accepted in Kimberly?</td>
+          <td class="text-right pr-6">
+            <i class="fas fa-edit text-green-600 cursor-pointer" onclick="editQuestion(3)"></i>
+          </td>
+          <td class="text-right">
+            <i class="fas fa-trash-alt text-gray-600 cursor-pointer" onclick="deleteQuestion(3)"></i>
+          </td>
+        </tr>
+        <tr class="border-t border-gray-200" id="row-4">
+          <td class="py-4 pr-6">4</td>
+          <td class="py-4" id="question-4">Is transportation included in the package?</td>
+          <td class="text-right pr-6">
+            <i class="fas fa-edit text-green-600 cursor-pointer" onclick="editQuestion(4)"></i>
+          </td>
+          <td class="text-right">
+            <i class="fas fa-trash-alt text-gray-600 cursor-pointer" onclick="deleteQuestion(4)"></i>
+          </td>
+        </tr>
+        <tr class="border-t border-gray-200" id="row-5">
+          <td class="py-4 pr-6">5</td>
+          <td class="py-4" id="question-5">I want to change my booking dates. How can I do this?</td>
+          <td class="text-right pr-6">
+            <i class="fas fa-edit text-green-600 cursor-pointer" onclick="editQuestion(5)"></i>
+          </td>
+          <td class="text-right">
+            <i class="fas fa-trash-alt text-gray-600 cursor-pointer" onclick="deleteQuestion(5)"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="mt-4 flex justify-end">
+      <button
+        class="bg-blue-700 text-white text-sm font-medium px-10 py-2 rounded-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        type="button"
+        onclick="addQuestion()">
+        Add FAQ
+      </button>
+    </div>
+  </div>
+<script src="faqscript.js"></script>
+
+            </div>
+        </div>
+    </div>
+    <script src="admindashboardscript.js"></script>
+</body>
+</html>

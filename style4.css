@@ -1,0 +1,199 @@
+/* ✅ FIRST ROW */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.summary {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+}
+
+/* ✅ SECOND ROW */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  padding: 10px;
+  width: 250px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filters select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  background: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='10' width='10' viewBox='0 0 20 20'><path d='M0 0 L10 10 L20 0'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+/* ✅ THIRD ROW */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+}
+
+.approve-btn {
+  background-color: #5c4dff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.approve-btn:hover {
+  background-color: #3f2fff;
+}
+
+/* ✅ REVIEW CARD */
+.review-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #e4e4e4;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.review-card:hover {
+  background: #d0d0d0;
+}
+
+.profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.review-details {
+  flex: 2;
+}
+
+.review-details .name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.review-details .name span {
+  color: #777;
+  font-weight: normal;
+}
+
+.review-details .stars {
+  color: #000;
+  margin: 5px 0;
+}
+
+.destination {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.review-text-container {
+  position: relative;
+}
+
+.save-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #5c4dff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background: #3f2fff;
+}
+
+/* ✅ DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dot-btn {
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+  z-index: 99;
+}
+
+.dropdown-menu p {
+  margin: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown-menu p:hover {
+  background-color: #eee;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
